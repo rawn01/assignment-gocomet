@@ -1,0 +1,79 @@
+.product-container {
+    margin: 10px 10px 50px 10px;
+    cursor: pointer;
+}
+
+.product-container:hover {
+    box-shadow: 0 4px 12px 0 rgba(0,0,0, 0.5);
+}
+
+/* .product {
+    
+}
+
+.product img {
+    
+} */
+
+.product-meta-data, .product-price {
+    padding: 8px;
+}
+
+.product-meta-data h3 {
+    color: #333;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
+    font-size: 15.5px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.product-meta-data h4 {
+    color: #333;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.product-price-real {
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.product-price-discount {
+    text-decoration: line-through;
+    font-weight: 500;
+    color: #777;
+    font-size: 12px;
+}
+
+.product-price {
+    margin-bottom: 15px;
+}
+
+.add-to-wishlist {
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-wishlist button {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    cursor: pointer;
+}
+
+
+.add-to-wishlist button:focus {
+    outline: none;
+    border-top: 1px solid #111;
+}
+
+.add-to-wishlist button:hover {
+    border-top: 1px solid rgb(200, 200, 200);
+    background-color: rgb(216, 214, 214);
+}
+
+.add-to-wishlist button:active {
+    background-color: #999;
+}

@@ -1,0 +1,262 @@
+/* Header */
+
+.header {
+    color: #555;
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header .hamburger {
+    display: none;
+}
+
+.header-logo {
+    margin-left: 3%;
+    cursor: pointer;
+}
+  
+.header-search-bar {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+}
+  
+.header-search-input {
+    width: 70%;
+    background-color: #F5F5F6;
+    padding: 7px;
+    font-size: 16px;
+}
+
+.header-search-input:focus {
+    outline: none;
+}
+  
+.header-search-button {
+    padding: 7px;
+    width: 80px;
+    font-size: 16px;
+    height: 40px;
+}
+
+.header-cart {
+    padding: 0 5px;
+    margin-right: 1.5%;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.header-cart > * {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header-cart > *:hover {
+    background-color: rgb(200, 200, 200, 0.4);
+}
+
+/* .cart {
+    z-index: 20;
+    height: 100vh;
+    float: right;
+    position: fixed; 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+} 
+*/
+
+.cart-modal {
+    z-index: 100000;
+    position: fixed;
+    width: 60%;
+    height: 80%;
+    background-color: rgba(35, 36, 33, 0.97);
+    top: 15%;
+    left: 20%;
+    overflow-y: scroll;
+    color: whitesmoke;
+    vertical-align: middle;
+}
+
+/* For flex-start item to left align */
+.cart-data {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 5px;
+}
+
+.cart-body {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-right: 20px;
+}
+
+.cart-body img {
+    width: 100px;
+    height: 150px;
+    margin-right: 25px;
+}
+
+.cart-body-data {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.cart-body-data p {
+    padding: 5px;
+    font-size: 87%;
+}
+
+.cart-body-data p:first-child {
+    font-weight: 600;
+    font-size: 95%;
+}
+
+.cart-body-price {
+    margin-left: 30px;
+    align-self: baseline;
+    font-weight: 600;
+    font-size: 95%;
+    padding-top: 5px;
+}
+
+.cart-footer {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cart-footer button {
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.cart-close {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    margin: 10px 10px 0 0; 
+    cursor: pointer;
+}
+
+
+/* Footer */
+/* .footer {
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    color:whitesmoke;
+    text-align: center;
+} */
+
+.footer {
+    display: flex;
+    background-color: #333;
+    padding: 5px 0;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+    }
+
+    .header .header-logo {
+        display: flex;
+        justify-content: center;
+        align-self: stretch;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #ececec;
+    }
+
+    .header-search-input {
+        width: 200px;
+        background-color: #F5F5F6;
+        font-size: 16px;
+        height: 25px;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    .header .header-search-bar {
+        display: flex;
+        height: 25px;
+        order: 1;
+    }
+
+    .header-search-button {
+        padding: 0;
+        font-size: 14px;
+        height: 25px;
+    }
+
+    .header-cart {
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+
+    .header-wishlist {
+        margin-left: 40px;
+        padding: 0;
+        flex: 1;
+    }
+
+    .header-bag {
+        margin-right: 40px;
+        padding: 0;
+    }
+
+    .cart-modal {
+        left: 0;
+        width: 100%;
+    }
+
+    .cart-body img {
+        width: 70px;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    .cart-body-price {
+        margin-left: 5px;
+        align-self: flex-end;
+        font-weight: 600;
+        font-size: 95%;
+        padding-top: 5px;
+        position: absolute;
+        right: 50px;
+    }
+}
