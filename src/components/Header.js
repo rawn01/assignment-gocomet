@@ -13,6 +13,7 @@ const Header = (props) => {
     const [cartIsOpen, setCartIsOpen] = useState(false); 
     const [searchInput, setSearchinput] = useState("");
 
+    // dispatch action to redux to set the search text property
     const search = (e) => {
         setSearchinput(e.target.value);
         if(e.target.value.length <= 0) {
@@ -22,10 +23,12 @@ const Header = (props) => {
         }
     };
 
+    // Not using this anymore. On key press changing the state and dispatching to redux
     const handleSearch = () => {
         dispatch(filterSlice.actions.setSearchText(searchInput.trim()));
     };
 
+    // Redirect to /wishlist if the user presses on wishlist icon
     const openWishlist = () => {
         history.push("/wishlist");
     };
@@ -34,12 +37,14 @@ const Header = (props) => {
         setCartIsOpen((prevState) => !prevState);
     };
 
+    // Select only the cart property from the redux store
     const cartItems = useSelector((store) => store.cart);
 
     const goHome = () => {
         history.push("/");
     };
 
+    // remove item from cart by dispatching action to redux
     const removeFromCart = (product) => {
         dispatch(CartSlice.actions.removeItemFromCart(product))
     };

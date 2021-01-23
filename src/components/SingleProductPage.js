@@ -4,10 +4,12 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import CartSlice from "../store/cartSlice";
 
+// When user clicks on specific product on the home page, this component renders.
 const SingleProductPage = () => {
     const dispatch = useDispatch();
     const product = useLocation().state;
 
+    // Add item to cart
     const addToCart = () => {
         dispatch(CartSlice.actions.addItemToCart(product));
     }

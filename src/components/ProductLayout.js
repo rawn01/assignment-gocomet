@@ -4,9 +4,11 @@ import { useSelector } from "react-redux";
 import "../styles/ProductLayout.css";
 import Product from "./Product";
 
+// Layout of the Product-container on the UI
 const ProductLayout = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
+    // Retreive only filtered/selected items from the redux store 
     const store = useSelector((store) => {
         let [...products] = store.product;
         const { searchText, gender, price, color, sort } = store.filter;
@@ -30,6 +32,7 @@ const ProductLayout = () => {
         return products;
     });
 
+    // Pagination (Showing 10 items per page)
     const numOfPages = Math.ceil(store.length / 10);
     const totalPages = [];
 
@@ -37,6 +40,7 @@ const ProductLayout = () => {
         totalPages.push(i);
     }
 
+    // After getting specific items from the store. Get only 10 result to display on the page.
     const products = store.slice((currentPage - 1) * 10, (currentPage * 10));
 
     const changePage = (e) => setCurrentPage(parseInt(e.target.innerText));

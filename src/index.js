@@ -26,3 +26,12 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+/*
+  Redux store - 
+  products: [ {}, {} ...],
+  filters: {},
+  wishlist: [{}, {}, ...] (only selected items)
+  cart: [{}, {}, ...] (only selected items)
+*/

@@ -3,10 +3,13 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Product from "./Product";
 
+// When user click wishlist, they are redirected to /wishlist where this 
+// component is rendered. Re-used Product component here.
 const Wishlist = () => {
     const history = useHistory();
     const [currentPage, setCurrentPage] = useState(1);
 
+    // Select only the filtered products from the total items(in wishlist property in redux store).
     const store = useSelector((store) => {
         let [...products] = store.wishlist;
         const { searchText, gender, sort } = store.filter;

@@ -11,6 +11,7 @@ const Filters = () => {
 
     const dispatch = useDispatch();
 
+    // dispatch action to redux to set the sort property
     const handleSortBy = (e) => {
         if(e.target.value === "low") {
             setSortBy("low");
@@ -24,6 +25,7 @@ const Filters = () => {
         }
     }
 
+    // set the state for radio buttons and dispatch to redux to set the gender propery
     const setTheGender = (e) => {
         if(e.target.value === "men") {
             setCheckedMen(true);
@@ -36,6 +38,7 @@ const Filters = () => {
         dispatch(filterSlice.actions.setGender(e.target.value));
     };
 
+    // dispatch action to redux to set the price property
     const setThePrice = (e) => {
         dispatch(filterSlice.actions.setPrice(e.target.value));
     };
